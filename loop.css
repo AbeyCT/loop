@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #878;
+    height: 70px;
+    width: 100%;
+}
+
+#logo{
+    margin-top: 10px;
+    float: left;
+    margin-right: 650px;
+    margin-left: 50px;
+
+}
+
+#menu{
+    list-style: none;
+
+}
+.menu-list{
+    float: left;
+    list-style: none;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:hover{
+    color: whitesmoke;
+    box-shadow: 1px 4px 3px wheat inset;
+    padding: 35px 20px 45px 25px;
+}
+
+#banner{
+    height: 550px;
+    width: 100%;
+    background-color: blueviolet;
+    background-image: url(female-AI.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+
+
+
+}
+
+
+
+.form_id{
+    height: 470px;
+    width: 400px;
+    background-color: rgba(18, 172, 120, 0.6);
+    display: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 30px;
+    
+
+}
+
+.form_id input{
+    width: 300px;
+    height:50px ;
+    font-size: large;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: none;
+    border-bottom: #666 3px solid;
+    background: none;
+    
+}
+
+.form_id input:focus{
+    outline: none;
+}
+
+.form-id label{
+    float: left;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form_id #submit{
+    width: 100px;
+    float: left;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.918);
+    border: none;
+    text-align: center;
+    margin-right: 100px;
+    cursor: pointer;
+}
+.form_id #submit:hover{
+    color: white;
+    transition: 0.3s ease;
+    background-color: paleturquoise;
+
+    
+}
+
+.close {
+    position: relative;
+    top: -30px;
+    font-size: xx-large;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    left: 342px;
+    background-color: #878;
+    height: 30px;
+    width: 35px;
+
+}
+.close:hover {
+    color:rgb(189, 10, 10);
+}

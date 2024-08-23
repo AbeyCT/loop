@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <link rel="stylesheet" href="loop.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="female-AI.png" alt="" srcset="" height="50px" width="60px">
+
+        <nav>
+            <ul id="menu">
+                <li class="menu-list"> <a href="#">Home</a></li>
+                <li class="menu-list"> <a href="#">About us</a></li>
+                <li class="menu-list"> <a href="#">Contact</a></li>
+                <li class="menu-list"> <a href="#">Services</a></li>
+                <li class="menu-list" onclick="toggleLoginForm()"> <a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner">
+            <div class="form_id" id="loginForm">
+                <span class="close" onclick="toggleLoginForm()">&times;</span>
+                <form id="userLoginForm" action="" method="post">
+                    <h1 class="form-title"> Login</h1><br>
+                    <label for="username">Username</label><br>
+                    <input type="text" name="username" id="loginUsername" placeholder="Your username here"> <br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="loginPassword" placeholder="Your password here"> <br> <br>
+                    <input id="loginSubmit" type="submit" value="Login">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleLoginForm() {
+            var loginForm = document.getElementById("loginForm");
+            loginForm.style.display = (loginForm.style.display === "none" || loginForm.style.display === "") ? "inline-flex" : "none";
+        }
+
+        function validateLogin(username, password) {
+            // Add your login validation logic here
+            // For demonstration, let's assume valid credentials are "username" and "password"
+            return username === "username" && password === "password";
+        }
+
+        window.onload = function() {
+            var userLoginForm = document.getElementById("userLoginForm");
+
+            userLoginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var loginUsername = document.getElementById("loginUsername").value;
+                var loginPassword = document.getElementById("loginPassword").value;
+
+                // While loop to prompt user for input until valid login credentials are provided
+                while (!validateLogin(loginUsername, loginPassword)) {
+                    alert("Invalid username or password. Please try again.");
+                    return; // Exit the function if login fails
+                }
+
+                // If login is successful, submit the form
+                alert("Login successful!");
+                userLoginForm.submit();
+            });
+        }
+    </script>
+</body>
+</html>
